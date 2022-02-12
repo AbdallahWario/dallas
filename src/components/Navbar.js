@@ -118,7 +118,7 @@ function Navbar(props) {
         <div className="container" style={{ position: "relative" }}>
           <div className="logo">
             <p>
-              <span className="theme-color">ISIOLOTIMES</span>blog
+              <span className="theme-color">ISIOLO</span>TIMES
             </p>
           </div>
           <ul className="nav-ul" style={{ marginLeft: "9rem" }}>
