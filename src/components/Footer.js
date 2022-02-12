@@ -8,7 +8,7 @@ function Footer() {
         <footer>
  
         <div className="text-center">
-          © Burhan Kocadağ 2021. All rights reserved.
+          © IsioloTimes 2021. All rights reserved.
         </div>
       </footer>
     </>

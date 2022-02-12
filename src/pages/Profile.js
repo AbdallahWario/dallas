@@ -21,7 +21,7 @@ function Profile() {
   useEffect(() => {
     const hi2 = async () => {
       setLoading(true);
-      await fetch("http://localhost:8000/api/user/", {
+      await fetch("https://itimesbackend.herokuapp.com/api/user/", {
         method: "GET",
         headers: {
           Authorization: "Bearer " + localStorage.getItem("token"),
@@ -31,17 +31,17 @@ function Profile() {
         .then(
           (x) => (
             x["detail"] ? history.push("/") : setUser(x),
-            fetch("http://localhost:8000/api/profile_list/",{method:'GET'})
+            fetch("https://itimesbackend.herokuapp.com/api/profile_list/",{method:'GET'})
               .then((res) => res.json())
               .then((data) =>
                 setProfile(data.filter((i) => i.user === x["id"]))
               ),
-            fetch("http://localhost:8000/api/comment_list/",{method:'GET'})
+            fetch("https://itimesbackend.herokuapp.com/api/comment_list/",{method:'GET'})
               .then((res) => res.json())
               .then((data) =>
                 setComment(data.filter((i) => i.user === x["id"]))
               ),
-            fetch("http://localhost:8000/api/post_list/",{method:'GET'})
+            fetch("https://itimesbackend.herokuapp.com/api/post_list/",{method:'GET'})
               .then((res) => res.json())
               .then((data) =>
                 setPosts(data.filter((i) => i.likes.find((i) => i === x["id"])))
@@ -65,7 +65,7 @@ function Profile() {
     }, 20);
   }
   function deletethemessage(e) {
-    fetch("http://localhost:8000/api/remove_comment/", {
+    fetch("https://itimesbackend.herokuapp.com/api/remove_comment/", {
       method: "POST",
       headers: {
         Accept: "application/json",
@@ -116,7 +116,7 @@ function Profile() {
     }, 10);
   }
   function saveimg() {
-    fetch("http://localhost:8000/api/edit_picture/", {
+    fetch("https://itimesbackend.herokuapp.com/api/edit_picture/", {
       method: "POST",
       headers: {
         accept: "application/json",

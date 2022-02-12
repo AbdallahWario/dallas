@@ -16,7 +16,7 @@ function Navbar(props) {
 
   useEffect(() => {
     const hi2 = async () => {
-      await fetch("http://localhost:8000/api/user/", {
+      await fetch("https://itimesbackend.herokuapp.com/api/user/", {
         method: "GET",
         headers: {
           Authorization: "Bearer " + localStorage.getItem("token"),
@@ -26,7 +26,7 @@ function Navbar(props) {
         .then(
           (x) => (
             setUser(x),
-            fetch("http://localhost:8000/api/profile_list/")
+            fetch("https://itimesbackend.herokuapp.com/api/profile_list/")
               .then((res) => res.json())
               .then((data) =>
                 setProfile(data.filter((i) => i.user === x["id"]))
@@ -39,7 +39,7 @@ function Navbar(props) {
 
   useEffect(() => {
     const hi = async () => {
-      await fetch("http://localhost:8000/api/category_list/")
+      await fetch("https://itimesbackend.herokuapp.com/api/category_list/")
         .then((res2) => res2.json())
         .then((data2) => setCategory(data2));
     };

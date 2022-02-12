@@ -14,7 +14,7 @@ function Articles(props) {
   useEffect(() => {
     const fetchData = async () => {
       setLoading(true);
-      await fetch("http://localhost:8000/api/post_list/")
+      await fetch("https://itimesbackend.herokuapp.com/api/post_list/")
         .then((res) => res.json())
         .then((data) => setPost(data.sort((a, b) => (a.id < b.id ? 1 : -1))
         .slice(x, y)));
@@ -27,7 +27,7 @@ function Articles(props) {
   }, [setPost]);
   const fetchMoreData = async () => {
     setTimeout(() => {
-      fetch("http://localhost:8000/api/post_list/")
+      fetch("https://itimesbackend.herokuapp.com/api/post_list/")
         .then((res) => res.json())
         .then((data) => setPost(data.sort((a, b) => (a.id < b.id ? 1 : -1))
         .slice(0, y * 2)));

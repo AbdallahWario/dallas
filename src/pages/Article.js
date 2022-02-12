@@ -27,7 +27,7 @@ function Makale(props) {
 
 
     const fetchData1 = () => {
-      fetch("http://localhost:8000/api/post_list/",{
+      fetch("https://itimesbackend.herokuapp.com/api/post_list/",{
         method: "GET"
       })
         .then((res) => res.json())
@@ -42,7 +42,7 @@ function Makale(props) {
         
     };
     const fetchData2 = () => {
-      fetch("http://localhost:8000/api/comment_list/",{
+      fetch("https://itimesbackend.herokuapp.com/api/comment_list/",{
         method: "GET"
       })
         .then((res) => res.json())
@@ -53,7 +53,7 @@ function Makale(props) {
     setTimeout(() => {
       setLoading(false);
     }, 500);
-    fetch("http://localhost:8000/api/user/", {
+    fetch("https://itimesbackend.herokuapp.com/api/user/", {
       method: "GET",
       headers: {
         Authorization: "Bearer " + localStorage.getItem("token"),
@@ -63,7 +63,7 @@ function Makale(props) {
   }, [urlx]);
 
   function AddCommentz(e) {
-    fetch("http://localhost:8000/api/user/", {
+    fetch("https://itimesbackend.herokuapp.com/api/user/", {
       method: "GET",
       headers: {
         Authorization: "Bearer " + localStorage.getItem("token"),
@@ -72,12 +72,12 @@ function Makale(props) {
       .then((i) => i.json())
       .then((x) => setUser(x));
     const postData = async () => {
-      fetch("http://localhost:8000/api/comment_list/",{
+      fetch("https://itimesbackend.herokuapp.com/api/comment_list/",{
         method: "GET"
       })
         .then((res) => res.json())
         .then((data) => setComment(data));
-      await fetch("http://localhost:8000/api/comment_list/", {
+      await fetch("https://itimesbackend.herokuapp.com/api/comment_list/", {
         method: "POST",
         headers: {
           Accept: "application/json",
@@ -91,7 +91,7 @@ function Makale(props) {
           username: String(e["username"]),
         }),
       });
-      fetch("http://localhost:8000/api/comment_list/",{
+      fetch("https://itimesbackend.herokuapp.com/api/comment_list/",{
         method: "GET"
       })
         .then((res) => res.json())
@@ -108,7 +108,7 @@ function Makale(props) {
         heart.classList.remove("liked");
         likespan.innerHTML = parseInt(likespan.innerHTML) - 1;
 
-        fetch("http://localhost:8000/api/remove_like_post/", {
+        fetch("https://itimesbackend.herokuapp.com/api/remove_like_post/", {
           method: "POST",
           headers: {
             Accept: "application/json",
@@ -124,7 +124,7 @@ function Makale(props) {
         heart.classList.add("liked");
         likespan.innerHTML = parseInt(likespan.innerHTML) + 1;
 
-        fetch("http://localhost:8000/api/like_post/", {
+        fetch("https://itimesbackend.herokuapp.com/api/like_post/", {
           method: "POST",
           headers: {
             Accept: "application/json",

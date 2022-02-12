@@ -9,17 +9,17 @@ function RightSide() {
   const [loading, setLoading] = useState(false);
   useEffect(() => {
     const hi = async () => {
-      fetch("http://localhost:8000/api/category_list/")
+      fetch("https://itimesbackend.herokuapp.com/api/category_list/")
         .then((res) => res.json())
         .then((data) => setCategory(data));
-      fetch("http://localhost:8000/api/post_list/")
+      fetch("https://itimesbackend.herokuapp.com/api/post_list/")
         .then((res) => res.json())
         .then((data) =>
           setPosts(
             data.sort((x, y) => (x.id < y.id ? 1 : -1))
           )
         );
-      fetch("http://localhost:8000/api/post_list/")
+      fetch("https://itimesbackend.herokuapp.com/api/post_list/")
         .then((res) => res.json())
         .then((data) =>
           setPostsz(

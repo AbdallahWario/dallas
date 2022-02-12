@@ -68,7 +68,7 @@ function Login() {
         loginbtn.innerHTML =
           "<div class='lds-ellipsis'><div></div><div></div><div></div><div></div></div></button>";
         loginbtn.disabled = true;
-        fetch("http://localhost:8000/api/token/", {
+        fetch("https://itimesbackend.herokuapp.com/api/token/", {
           method: "POST",
           headers: {
             Accept: "application/json",
@@ -258,7 +258,7 @@ function Login() {
       registerbtn.innerHTML =
       "<div class='lds-ellipsis'><div></div><div></div><div></div><div></div></div></button>";
       registerbtn.disabled = true;
-      fetch("http://localhost:8000/api/register/", {
+      fetch("https://itimesbackend.herokuapp.com/api/register/", {
         method: "POST",
         headers: {
           Accept: "application/json",

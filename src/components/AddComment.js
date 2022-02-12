@@ -10,7 +10,7 @@ function AddComment(props) {
 
   const textareaerror = document.querySelector(".textarea-error");
   useEffect(() => {
-    fetch("http://localhost:8000/api/user/", {
+    fetch("https://itimesbackend.herokuapp.com/api/user/", {
       method: "GET",
       headers: {
         Authorization: "Bearer " + localStorage.getItem("token"),

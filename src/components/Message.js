@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 function Message(props) {
   const [profile, setProfile] = useState([]);
   useEffect(() => {
-    fetch(`http://localhost:8000/api/profile_list/`)
+    fetch(`https://itimesbackend.herokuapp.com/api/profile_list/`)
       .then((res) => res.json())
       .then((data) => setProfile(data.filter((i) => i.user === props.user)));
   }, [props]);

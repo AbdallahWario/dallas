@@ -15,7 +15,7 @@ function Category(props)
       const fetchData = async () => {
   
         setLoading(true);
-         await fetch("http://localhost:8000/api/post_list/")
+         await fetch("https://itimesbackend.herokuapp.com/api/post_list/")
           .then((res) => res.json())
           .then((data) => setPost(data));
           setTimeout(() =>{setLoading(false)},500)
