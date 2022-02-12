@@ -9,8 +9,7 @@ function Header() {
         </p>{" "}
 
       </div>
-      {/* <img alt="" src='https://i.ibb.co/KFBZ2L3/profile.jpg' className="header-img"/> */}
-      <div className="imgbg"></div>
+     
     </header>
   );
 }

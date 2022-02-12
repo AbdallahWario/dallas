@@ -190,7 +190,7 @@ function Makale(props) {
                         <div className="article-text">
                           <div className="text-center">
                             <span className="span">
-                              Created Date {i.created_date} by Burhan Kocadağ
+                              Created Date {i.created_date} by IsioloTimes
                             </span>
                             <h1>{i.title}</h1>
                           </div>
