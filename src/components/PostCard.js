@@ -14,7 +14,7 @@ function PostCard(props) {
             {props.post.title}{" "}
           </h2>
           <div style={{position:'relative'}}>
-            <img src="https://i.ibb.co/KFBZ2L3/profile.jpg" className="postcard-profile" />
+            {/* <img src="https://i.ibb.co/KFBZ2L3/profile.jpg" className="postcard-profile" /> */}
             <div className="username-date">
               <span className="cart-user">Isiolo Times</span>
            
