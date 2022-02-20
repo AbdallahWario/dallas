@@ -33,9 +33,9 @@ function App() {
           <Route path="/articles/">
             <Articles />
           </Route>
-          <Route path="/about">
-            <About />
-          </Route>
+          {/* <Route path="/about">
+            <About /> */}
+          {/* </Route> */}
           <Route path="/profile">
             <Profile />
           </Route>
