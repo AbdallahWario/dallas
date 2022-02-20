@@ -24,7 +24,7 @@ function Index(props) {
 
   return (
     <>
-      <Header />
+     
       <main>
         <div className="container" style={{ marginTop: "6rem" }}>
           <p className="sectoin-title">Most popular articles</p>
