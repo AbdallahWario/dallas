@@ -16,8 +16,7 @@ function PostCard(props) {
           <div style={{position:'relative'}}>
             {/* <img src="https://i.ibb.co/KFBZ2L3/profile.jpg" className="postcard-profile" /> */}
             <div className="username-date">
-                {props.post.created_date}   
-              <span className="cart-user">{props.post.author}  </span>
+              <span className="cart-user">{props.post.author}</span>
            
               <p className="cart-date">
                 {props.post.created_date}   
