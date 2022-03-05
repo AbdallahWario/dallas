@@ -136,11 +136,11 @@ function Navbar(props) {
                 Articles
               </NavLink>
             </li>
-            <li className="nav-li">
+            {/* <li className="nav-li">
               <NavLink to="/about/" onClick={navclick} activeClassName="active">
                 About
               </NavLink>
-            </li>
+            </li> */}
             <li className="nav-li">
               <span onClick={categories} style={{ cursor: "pointer" }}>
                 Categories <i className="fas fa-caret-down"></i>

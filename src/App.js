@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Switch ,HashRouter } from "react-router-dom";
+import {  Route, Switch ,HashRouter } from "react-router-dom";
 import Index from "./pages/Index";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -6,7 +6,6 @@ import Article from "./pages/Article";
 import Articles from "./pages/Articles";
 import Category from "./pages/Category";
 import ToTop from "./components/ToTop";
-import About from "./pages/About";
 import "./App.css";
 
 import Page404 from "./pages/Page404";
